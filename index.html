@@ -69,7 +69,7 @@
 					<section data-markdown>
 					    <script type="text/template">
                         ## 2005: Fix Browser glitches
-                        * prototype, mooTools, YUI, jQuery etc.
+                        * prototype, mooTools, YUI, **jQuery** etc.
                         * Einfache API für DOM manipulationen
                         * Simples AJAX
                         * "Enabler" von Web 2.0
@@ -79,7 +79,7 @@
 					<section data-markdown>
 					    <script type="text/template">
                         ## 1st Gen MV*
-                        * JavascriptMVC (2008), Backbone.js (2010), Spine (2011)
+                        * JavascriptMVC (2008), **Backbone.js** (2010), Spine (2011)
                         * Ziel: Wartbate Single-Page-Apps
                           * Sturktur ins jQuery "gehacke" mit bekannten Kontezpten
                         * Hauptsächlich: Controller, Models und teilweise Templates
@@ -88,18 +88,19 @@
 					<section data-markdown>
 					    <script type="text/template">
                         ## 2nd Gen MV*
-                        * Knockout.js (2010), Angular.js (2010), Ember.js (2011)
+                        * Knockout.js (2010), **AngularJS** (2010), Ember.js (2011)
                         * Neuerungen
                           * **(2-way) Data-Binding**
                           * Routing ("do not break the back button")
+                        * Ziel: Nutzbare Single-Page-Apps
 					    </script>
 					</section>
 					<section data-markdown>
 					    <script type="text/template">
                         ## 3rd Gen MV*
-                        * React¹ (2013), mithril (2014), jsblocks (2015)  <!-- Angular 2.x (2015?) -->
+                        * React¹ (2013), mithril (2014), jsblocks (2015)  <!-- AngularJS 2.x (2015?) -->
                         * Neuerungen
-                          * Virtual-DOM
+                          * Virtual-DOM (!)
                           * Isomorphie (aka server-side rendering)
 
                         <small>¹ (React ist nur V aus MV*)</small>
@@ -107,17 +108,31 @@
 					</section>
 				</section>
 
-				<section>
+				<!--<section>
 				    <img src="assets/oh-no-i-wrote-another.png" alt="Not Invented Here Syndrom">
-				</section>
-
+				</section>-->
+				
+				<section>
+				    <section>
+					    <h2 style="color: #00d8ff; background: url(assets/react-logo.svg) no-repeat 40% center; background-size: contain; padding-left: 10%;">React</h2>
+					</section>
+					<section>
+					    <h2>Was ist React?</h2>
+					    <ul>
+					      <li>Kein MV*-Framework</li>
+					      <li>Kein Template</li>
+					      <li>Mächtigkeit vergleichbar mit Angulars Directives</li>
+					      <li>Datenänderung -> vollständiges re-render</li>
+					    </ul>
+					</section>
+                </section>
 				<section>
 				    <section>
 					    <h2>Wie wählt man aus?</h2>
 					</section>
 					<section>
 					<blockquote>
-					The greatest trick the devil ever pulled was to lead people to judge JavaScript frameworks by their example code on TodoMVC.
+					"The greatest trick the devil ever pulled was to lead people to judge JavaScript frameworks by their example code on TodoMVC."
 					</blockquote>
 					<p style="font-size: x-small"><a href="https://twitter.com/iamdevloper/status/605485652642283520">@iamdeveloper</a></p>
 					</section>
