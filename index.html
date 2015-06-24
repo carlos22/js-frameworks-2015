@@ -174,43 +174,68 @@
                         </aside>
                     </section>
                     <section>
-              <pre><code>var Greeting = React.createClass({
+		      <pre><code>var Greeting = React.createClass({
+    render: function () {
+        return (
+            &lt;div&gt;
+                &lt;h1&gt;Hello User&lt;/h1&gt;
+            &lt;/div&gt;
+        );
+    }
+});
+React.render(&lt;Greeting /&gt;, document.getElementById('container'));
+                    </code></pre>
+                    </section>
+                    <section>
+                    <h2>JSX</h2>
+                    <pre><code data-trim>&lt;div class="greeting"&gt;
+    &lt;h1&gt;Hello User&lt;/h1&gt;
+&lt;/div&gt;
+            </pre></code>
+                    <pre><code data-trim>React.createElement("div", {class: "greeting"}, 
+    React.createElement("h1", null, "Hello User")
+)
+                    </code></pre>
+                    </section>
+                    <section>
+                    <h2>Props</h2>
+		      <pre><code>var Greeting = React.createClass({
+    render: function () {
+        return (
+            &lt;div&gt;
+                &lt;h1&gt;{this.props.text} User&lt;/h1&gt;
+            &lt;/div&gt;
+        );
+    }
+});
+React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('container'));
+              </code></pre>
+                    </section>
+                    <section>
+                    <h2>State</h2>
+		      <pre><code>var Greeting = React.createClass({
     getInitialState: function () {
         return {name: 'User'};
     },
-    onChange: function (e) {
+    nameInputChange: function (e) {
         this.setState({name: e.target.value});
     },
     render: function () {
         return (
             &lt;div&gt;
                 &lt;h1&gt;{this.props.text} {this.state.name}&lt;/h1&gt;
-                Name: &lt;input type="text" onChange={this.onChange} /&gt; 
+                Name: &lt;input type="text" 
+                             onChange={this.nameInputChange} 
+                             value={this.state.name} /&gt; 
             &lt;/div&gt;
         );
     }
 });
-React.render(&lt;Greeting text="Grüzi" /&gt;, document.getElementById('container'));
+React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('container'));
               </code></pre>
-              <a href="https://jsfiddle.net/mmcu7f2s/1/" target="_blank">jsfiddle</a>
+              <a href="https://jsfiddle.net/mmcu7f2s/3/" target="_blank">jsfiddle</a>
                     </section>
-                    <section>
-                    <h2>JSX</h2>
-                    <pre><code data-trim>
-              &lt;div&gt;
-    &lt;h1&gt;{this.props.text} {this.state.name}&lt;/h1&gt;
-    Name: &lt;input type="text" onChange={this.onChange} /&gt; 
-&lt;/div&gt;
-            </pre></code>
-            
-                    <pre><code data-trim>
-            React.createElement("div", null, 
-    React.createElement("h1", null, this.props.text, " ", this.state.name), 
-    "Name: ", React.createElement("input", {type: "text", onChange: this.onChange})
-)
-                    </code></pre>
-                    </section>
-            <section>
+		    <section>
                         <img src="assets/re-render-all-the-things.jpg" alt="re-render all the things">
                     </section>
                     <section>
@@ -272,9 +297,9 @@ React.render(&lt;Greeting text="Grüzi" /&gt;, document.getElementById('containe
 
                     <section>
                         <h2>Wie?</h2>
-            <p class="fragment">Kein Framework-fanatismus</p>
+			<p class="fragment">Kein Framework-fanatismus</p>
                         <aside class="notes">
-              Freundin danach auszusuchen wie gut man mit ihr Schluss machen kann.
+			  Freundin danach auszusuchen wie gut man mit ihr Schluss machen kann.
                         </aside>
                     </section>
 
