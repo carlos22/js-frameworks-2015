@@ -136,7 +136,17 @@
                             <li>Testing</li>
                         </ul>
                     </section>
-                    
+                    <section>
+                    <pre><code>&lt;div class=&quot;container&quot; ng-app&gt;
+    &lt;form&gt;
+        &lt;h1&gt;Hello {{name}}&lt;/h1&gt;
+        Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot; ng-init=&quot;name=&#39;User&#39;&quot;/&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<a href="https://jsfiddle.net/vccxqLfr/" target="_blank">jsfiddle</a>
+                    </section>
                     <section>
                         <h2>AngularJS Pros</h2>
                         <ul>
@@ -297,10 +307,15 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
 
                     <section>
                         <h2>Wie?</h2>
-			<p class="fragment">Kein Framework-fanatismus</p>
+			<p class="fragment">Kein Framework Fanatismus</p>
+			<p class="fragment">Komplexität verringern</p>
                         <aside class="notes">
-			  Freundin danach auszusuchen wie gut man mit ihr Schluss machen kann.
+			  Partner danach auszusuchen wie gut man mit ihm Schluss machen kann.
                         </aside>
+                    </section>
+                    
+                    <section data-background="assets/lego.jpg">
+                    <h2>Modularisierung</h2>
                     </section>
 
                     <!--<section>
@@ -369,10 +384,10 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                     <section data-markdown>
                         <script type="text/template">
                         ## Stabilität
-                        * Angular 1.x gilt als deprecated -> 2.x völliges Rewrite
+                        * Angular 1.x gilt als deprecated -&gt; 2.x völliges Rewrite
                         * Backbone.js: Stable
                         * Ember.js: Viele API änderungen (vor allem Ember.Data)
-                        * ReactJS: Inkrementelle verbesserungen -> Kaum API bruch
+                        * ReactJS: Inkrementelle verbesserungen -&gt; Kaum API bruch
                         * jsblocks: Neu und beta
                         * mithril: Minimalistisch und recht stabil
                         </script>
@@ -444,7 +459,7 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                     { src: 'plugin/notes/notes.js', async: true }
                 ]
             });
-
+	    Reveal.configure({ slideNumber: 'c / t' });
         </script>
 
     </body>
