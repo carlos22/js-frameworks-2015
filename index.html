@@ -136,11 +136,7 @@
                             <li>Testing</li>
                         </ul>
                     </section>
-                    <section>
-                        <h2>Beispiel: AngularJS</h2>
-                        <iframe width="100%" height="500" src="//jsfiddle.net/0vLvt6wu/3/embedded/js,html,result/presentation/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                        <p><a href="http://jsfiddle.net/0vLvt6wu/3/light/" target="_blank">AngularJS Example: Real Time Search</a></p>
-                    </section>
+                    
                     <section>
                         <h2>AngularJS Pros</h2>
                         <ul>
@@ -178,6 +174,43 @@
                         </aside>
                     </section>
                     <section>
+              <pre><code>var Greeting = React.createClass({
+    getInitialState: function () {
+        return {name: 'User'};
+    },
+    onChange: function (e) {
+        this.setState({name: e.target.value});
+    },
+    render: function () {
+        return (
+            &lt;div&gt;
+                &lt;h1&gt;{this.props.text} {this.state.name}&lt;/h1&gt;
+                Name: &lt;input type="text" onChange={this.onChange} /&gt; 
+            &lt;/div&gt;
+        );
+    }
+});
+React.render(&lt;Greeting text="Grüzi" /&gt;, document.getElementById('container'));
+              </code></pre>
+              <a href="https://jsfiddle.net/mmcu7f2s/1/" target="_blank">jsfiddle</a>
+                    </section>
+                    <section>
+                    <h2>JSX</h2>
+                    <pre><code data-trim>
+              &lt;div&gt;
+    &lt;h1&gt;{this.props.text} {this.state.name}&lt;/h1&gt;
+    Name: &lt;input type="text" onChange={this.onChange} /&gt; 
+&lt;/div&gt;
+            </pre></code>
+            
+                    <pre><code data-trim>
+            React.createElement("div", null, 
+    React.createElement("h1", null, this.props.text, " ", this.state.name), 
+    "Name: ", React.createElement("input", {type: "text", onChange: this.onChange})
+)
+                    </code></pre>
+                    </section>
+            <section>
                         <img src="assets/re-render-all-the-things.jpg" alt="re-render all the things">
                     </section>
                     <section>
@@ -185,7 +218,7 @@
                         <ul>
                           <li>Kein MV*-Framework: View Layer</li>
                           <li>Keine Template-Engine</li>
-                          <li>Mächtigkeit vergleichbar mit Angular Directives</li>
+                          <li>Vergleichbar mit Angular Directives</li>
                         </ul>
                     </section>
                     <!--<section>
@@ -201,11 +234,6 @@
                         </ol>
                     </section>
                     <section>
-                        <h3>Beispiel: React</h3>
-                        <iframe width="100%" height="500" src="//jsfiddle.net/martinaglv/3N6D3/embedded/js,html,result/presentation/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                        <p><a href="http://jsfiddle.net/martinaglv/3N6D3/light/" target="_blank">React Example: Real Time Search</a></p>
-                    </section>
-                    <section>
                         <h2>App Architektur: Flux</h2>
                         <img src="assets/flux-simple-f8-diagram-1300w.png" alt="Flux">
                         <ul>
@@ -216,13 +244,13 @@
                             This works especially well with React’s declarative programming style, which allows the store to send updates without specifying how to transition views between states.
                         </aside>
                     </section>
-                    <section>
+                    <!--<section>
                         <h2>React Ecosystem</h2>
                         <ul>
                             <li>ImmutableJS: </li>
                             <li>Reflux: TODO</li>
                         </ul>
-                    </section>
+                    </section>-->
                 </section>
 
                 <section>
@@ -244,10 +272,10 @@
 
                     <section>
                         <h2>Wie?</h2>
-                        <ul>
-                            <li class="fragment">Kein Framework-fanatismus</li>
-                            <li class="fragment">...</li>
-                        </ul>
+            <p class="fragment">Kein Framework-fanatismus</p>
+                        <aside class="notes">
+              Freundin danach auszusuchen wie gut man mit ihr Schluss machen kann.
+                        </aside>
                     </section>
 
                     <!--<section>
@@ -332,7 +360,7 @@
                       </section>
                 </section>
 
-                <!--
+<!--
                 <section>
                     <section>
                         <h2>Fazit</h2>
@@ -341,11 +369,26 @@
                         TODO
                     </section>
                 </section>
-
+-->
                 <section style="text-align: left;">
                     <h1>THE END</h1>
                 </section>
-                -->
+                
+                <section>
+            <section>
+              <h2>Demos</h2>
+            </section>
+            <section>
+                        <h2>AngularJS</h2>
+                        <iframe width="100%" height="500" src="//jsfiddle.net/0vLvt6wu/3/embedded/js,html,result/presentation/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <p><a href="http://jsfiddle.net/0vLvt6wu/3/light/" target="_blank">AngularJS Example: Real Time Search</a></p>
+                    </section>
+            <section>
+                        <h3>React</h3>
+                        <iframe width="100%" height="500" src="//jsfiddle.net/martinaglv/3N6D3/embedded/js,html,result/presentation/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <p><a href="http://jsfiddle.net/martinaglv/3N6D3/light/" target="_blank">React Example: Real Time Search</a></p>
+            </section>
+                </section>
 
             </div>
 
