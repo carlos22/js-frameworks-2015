@@ -185,9 +185,13 @@
                         <ul>
                             <li>Gelerntes ist Angular-spezifisch</li>
                             <li>Viel Magic</li>
-                            <li>Wenig Struktur</li>
+                            <!--<li>Wenig Struktur</li>-->
+                            <li>2-way Data Binding</li>
                             <li>2.0 - völliges Rewrite</li>
                         </ul>
+                        <aside class="notes">
+                            2way db: kompliziert debugging; kann die Anwendung langsam machen
+                        </aside>
                     </section>
                 </section>
 
@@ -271,9 +275,11 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
               </code></pre>
               <a href="https://jsfiddle.net/mmcu7f2s/3/" target="_blank">jsfiddle</a>
                     </section>
+                    <!-- TODO: props vs state -->
                     <section>
                         <img src="assets/re-render-all-the-things.jpg" alt="re-render all the things">
                     </section>
+                    <!-- TODO: rendering vdom -->
                     <section>
                         <h2>React</h2>
                         <ul>
@@ -311,13 +317,23 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                     <section>
                         <h2>React Pros</h2>
                         <ul>
-                            <li>TODO</li>
+                            <li>Schnell</li>
+                            <li>Isolation durch Komponenten</li>
+                            <li>Nur View</li>
+                            <li>DOM Abstraktion</li>
+                            <li>Server-side rendering</li>
                         </ul>
+                        <aside class="notes">
+                            Patterns sind wichtig.
+                            DOM Abstraktion: Synthetic Events
+                            State: Interaktivität
+                        </aside>
                     </section>
                     <section>
                         <h2>React Cons</h2>
                         <ul>
-                            <li>TODO</li>
+                            <li>Nur View</li>
+                            <li>Groß: min + gzip 36kb</li>
                         </ul>
                     </section>
                 </section>
@@ -339,7 +355,7 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                         <h2>Ember.js</h2>
                         <ul class="plain">
                             <li>Stark 'Opinionated'</li>
-                            <li>Groß und langsam</li>
+                            <li>Groß und 'langsam'</li>
                             <li>Viele Changes (Ember.Data)</li>
                         </ul>
                     </section>
@@ -442,6 +458,8 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                     <section data-background="assets/lego.jpg">
                     <h2>Modularisierung</h2>
                         <aside class="notes">
+                            Schwerer! Mehr Aufwand<br>
+                            Vorteil: Küche austauschen, ohne das Gebäude abzureissen.<br>
                             Angular 2.0
                         </aside>
                     </section>
@@ -494,7 +512,7 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                         <ul class="plain">
                             <li>Native Web-Apps (Single-Page-Apps)
                             <ul class="plain"><li>Desktop</li><li>Mobile</li></ul></li>
-                            <li>Server-side Web-Apps</li>
+                            <li>Server-renderd Web-Apps</li>
                         </ul>
                     </section>
                 </section>
