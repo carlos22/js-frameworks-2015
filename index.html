@@ -214,6 +214,14 @@
                         </aside>
                     </section>
                     <section>
+		      <span class="fragment" data-fragment-index="1" style="position: absolute; top: -25%; width: 20%; left: 12%;">Für jeden</span>
+		      <h3>Zustand &nbsp;&rightarrow;&nbsp; Darstellung</h3>
+		      <span class="fragment" data-fragment-index="1" style="  position: absolute; right: 10%; top: 75%; width: 29%;">des gesamten UI</span>
+                    </section>
+                    <section>
+                        <img src="assets/re-render-all-the-things.jpg" alt="re-render all the things">
+                    </section>
+                    <section>
 		      <pre><code>var Greeting = React.createClass({
     render: function () {
         return (
@@ -250,6 +258,7 @@ React.render(&lt;Greeting /&gt;, document.getElementById('container'));
 });
 React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('container'));
               </code></pre>
+	      <p class="fragment">Props: Nicht veränderbar von der Komponente selbst</p>
                     </section>
                     <section>
                     <h2>State</h2>
@@ -276,9 +285,6 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
               <a href="https://jsfiddle.net/mmcu7f2s/3/" target="_blank">jsfiddle</a>
                     </section>
                     <!-- TODO: props vs state -->
-                    <section>
-                        <img src="assets/re-render-all-the-things.jpg" alt="re-render all the things">
-                    </section>
                     <!-- TODO: rendering vdom -->
                     <section>
                         <h2>React</h2>
@@ -305,16 +311,6 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                         </aside>
                     </section>
                     <section>
-                        <h2>App Architektur: Flux</h2>
-                        <img src="assets/flux-simple-f8-diagram-1300w.png" alt="Flux">
-                        <p>Unidirektionaler Data-Flow statt MVC</p>
-                        <aside class="notes">
-                            This works especially well with React’s declarative programming style, which allows the store to send updates without specifying how to transition views between states.<br>
-                            Impls: Reflux, Fluxxor, Delorian.js<br>
-                            Model: ImmutableJS
-                        </aside>
-                    </section>
-                    <section>
                         <h2>React Pros</h2>
                         <ul>
                             <li>Schnell</li>
@@ -335,6 +331,16 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                             <li>Nur View</li>
                             <li>Groß: min + gzip 36kb</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h2>Flux</h2>
+                        <img src="assets/flux-simple-f8-diagram-1300w.png" alt="Flux">
+                        <p>Unidirektionaler Data-Flow statt MVC</p>
+                        <aside class="notes">
+                            This works especially well with React’s declarative programming style, which allows the store to send updates without specifying how to transition views between states.<br>
+                            Impls: Reflux, Fluxxor, Delorian.js<br>
+                            Model: ImmutableJS
+                        </aside>
                     </section>
                 </section>
 
