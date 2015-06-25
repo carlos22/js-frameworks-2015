@@ -148,9 +148,24 @@
 <a href="https://jsfiddle.net/vccxqLfr/" target="_blank">jsfiddle</a>
                     </section>
                     <section>
-                      <h2>Magic</h2>
+                        <h2>Magic</h2>
+                        <img src="assets/shia-labeouf-magic-gif.gif" alt="magic">
+                    </section>
+                    <section>
+                      <h2>App Start</h2>
                       <img src="assets/angular-arch.jpg" alt="Angular Architektur" />
                       <p style="font-size: x-small;"><a href="https://speakerdeck.com/asarturas/angularjs">source</a></p>
+                        <aside class="notes">
+                            1. Browser parses HTML to DOM<br>
+                            2. angular.js is loaded<br>
+                            3. waiting for DOMContentLoaded event<br>
+                            4. Angular looks for ng-app directive<br>
+                            5. cofiguring $injector<br>
+                            6. creating $compile and $rootScope<br>
+                            7. compiling DOM and linking with scope<br>
+                            8. ng-init assigns 'World' to name model<br>
+                            9. {{name}} interpolates expression<br>
+                        </aside>
                     </section>
                     <section>
                         <h2>AngularJS Pros</h2>
@@ -207,7 +222,7 @@ React.render(&lt;Greeting /&gt;, document.getElementById('container'));
     &lt;h1&gt;Hello User&lt;/h1&gt;
 &lt;/div&gt;
             </pre></code>
-                    <pre><code data-trim>React.createElement("div", {class: "greeting"}, 
+                    <pre><code data-trim>React.createElement("div", {class: "greeting"},
     React.createElement("h1", null, "Hello User")
 )
                     </code></pre>
@@ -239,9 +254,9 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
         return (
             &lt;div&gt;
                 &lt;h1&gt;{this.props.text} {this.state.name}&lt;/h1&gt;
-                Name: &lt;input type="text" 
-                             onChange={this.nameInputChange} 
-                             value={this.state.name} /&gt; 
+                Name: &lt;input type="text"
+                             onChange={this.nameInputChange}
+                             value={this.state.name} /&gt;
             &lt;/div&gt;
         );
     }
@@ -254,7 +269,7 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                         <img src="assets/re-render-all-the-things.jpg" alt="re-render all the things">
                     </section>
                     <section>
-                        <h2>React: Facts</h2>
+                        <h2>React</h2>
                         <ul>
                           <li>Kein MV*-Framework: View Layer</li>
                           <li>Keine Template-Engine</li>
@@ -266,20 +281,22 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                         <p class="fragment">Ja.</p>
                     </section>-->
                     <section>
-                        <h2>React: Innovationen</h2>
+                        <h2>Eigenschaften</h2>
                         <ol>
                             <li class="fragment">Re-Rendering statt Event- und Data-binding</li>
                             <li class="fragment">Virtual DOM: Schnelles Rendern</li>
                             <li class="fragment">Komponenten basiert</li>
                         </ol>
+                        <aside class="notes">
+                            Mindset: Server-side rendering<br>
+                            Kein (impliziter) State im DOM!
+                        </aside>
                     </section>
                     <section>
                         <h2>App Architektur: Flux</h2>
                         <img src="assets/flux-simple-f8-diagram-1300w.png" alt="Flux">
-                        <ul>
-                            <li>Unidirektionaler Data-Flow statt MVC</li>
-                            <li>Viele implementierungen Verfügbar</li>
-                        </ul>
+                        <p>Unidirektionaler Data-Flow statt MVC</p>
+                        <!--<p>Viele implementierungen Verfügbar</p>-->
                         <aside class="notes">
                             This works especially well with React’s declarative programming style, which allows the store to send updates without specifying how to transition views between states.
                         </aside>
@@ -361,13 +378,13 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
 
                     <section>
                         <h2>Wie?</h2>
-			<p class="fragment">Kein Framework Fanatismus</p>
-			<p class="fragment">Komplexität verringern</p>
+                        <p class="fragment">Kein Framework Fanatismus</p>
+                        <p class="fragment">Komplexität verringern</p>
                         <aside class="notes">
-			  Partner danach auszusuchen wie gut man mit ihm Schluss machen kann.
+                            Partner danach auszusuchen wie gut man mit ihm Schluss machen kann.
                         </aside>
                     </section>
-                    
+
                     <section data-background="assets/lego.jpg">
                     <h2>Modularisierung</h2>
                     </section>
@@ -412,7 +429,7 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                 <section style="text-align: left;">
                     <h1>THE END</h1>
                 </section>
-                
+
                 <section>
             <section>
               <h2>Demos</h2>
