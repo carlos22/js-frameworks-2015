@@ -19,6 +19,14 @@
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
+        <style>
+            .reveal ul {
+                list-style-type: square;
+            }
+            .reveal ul.plain {
+                list-style-type: none;
+            }
+        </style>
 
         <!-- Printing and PDF exports -->
         <script>
@@ -110,10 +118,10 @@
                         * React (2013), mithril (2014), jsblocks (2015)  <!-- AngularJS 2.x (2015?) -->
                           * Performance: Virtual-DOM
                           * Isomorphie (aka server-side rendering)
+                        </script>
                         <aside class="notes">
                             React ist nur View aus MV-ish
                         </aside>
-                        </script>
                     </section>
                 </section>
 
@@ -200,7 +208,7 @@
                         <h3>View</h3>
                         <h3 style="text-decoration: line-through;">Controller</h3>
                         <aside class="notes">
-                            Soviel Buzz um einen View Layer?
+                            Soviel Buzz um einen View Layer? Ja
                         </aside>
                     </section>
                     <section>
@@ -221,7 +229,7 @@ React.render(&lt;Greeting /&gt;, document.getElementById('container'));
                     <pre><code data-trim>&lt;div class="greeting"&gt;
     &lt;h1&gt;Hello User&lt;/h1&gt;
 &lt;/div&gt;
-            </pre></code>
+                    </code></pre>
                     <pre><code data-trim>React.createElement("div", {class: "greeting"},
     React.createElement("h1", null, "Hello User")
 )
@@ -296,41 +304,35 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                         <h2>App Architektur: Flux</h2>
                         <img src="assets/flux-simple-f8-diagram-1300w.png" alt="Flux">
                         <p>Unidirektionaler Data-Flow statt MVC</p>
-                        <!--<p>Viele implementierungen Verfügbar</p>-->
                         <aside class="notes">
-                            This works especially well with React’s declarative programming style, which allows the store to send updates without specifying how to transition views between states.
+                            This works especially well with React’s declarative programming style, which allows the store to send updates without specifying how to transition views between states.<br>
+                            Impls: Reflux, Fluxxor, Delorian.js<br>
+                            Model: ImmutableJS
                         </aside>
                     </section>
-                    <!--<section>
-                        <h2>React Ecosystem</h2>
-                        <ul>
-                            <li>ImmutableJS: </li>
-                            <li>Reflux: TODO</li>
-                        </ul>
-                    </section>-->
                 </section>
 
                 <section>
                     <section>
-                        <h2>& Co.</h2>
+                        <h2>&amp; Co.</h2>
                     </section>
                     <section>
                         <h2>Backbone.js</h2>
-                        <ul style="list-style-type: none">
+                        <ul class="plain">
                             <li>MV-ish JS Referenz</li>
                             <li>Problematisch: Views</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Ember.js</h2>
-                        <ul style="list-style-type: none">
+                        <ul class="plain">
                             <li>Stark 'Opinionated'</li>
                             <li>Groß und langsam</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Ampersand.js</h2>
-                        <ul style="list-style-type: none">
+                        <ul class="plain">
                             <li>MV-ish</li>
                             <li>Backbone ähnlich</li>
                             <li>Modular (Browserfiy)</li>
@@ -338,7 +340,7 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                     </section>
                     <section>
                         <h2>mithril</h2>
-                        <ul style="list-style-type: none">
+                        <ul class="plain">
                             <li>Minimalistisch: 16 Methoden</li>
                             <li>mv-ish + react-like rendering</li>
                         </ul>
@@ -425,6 +427,19 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
 
                     <section data-background="assets/lego.jpg">
                     <h2>Modularisierung</h2>
+                        <aside class="notes">
+                            Angular 2.x
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Framework &rightarrow; App</h2>
+                        <p>Struktur</p>
+                        <p>Patterns</p>
+                        <p>Menschen</p>
+                        <aside class="notes">
+                            Many options and patterns on how to structure, build, and deploy applications beyond just picking a framework.
+                        </aside>
                     </section>
 
                     <!--<section>
@@ -434,7 +449,7 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                     <p style="font-size: x-small"><a href="https://twitter.com/iamdevloper/status/605485652642283520">@iamdeveloper</a></p>
                     </section> -->
 
-
+<!--
                     <section data-markdown>
                         <script type="text/template">
                         ## Stabilität
@@ -452,6 +467,20 @@ React.render(&lt;Greeting text="Grüezi" /&gt;, document.getElementById('contain
                         * TODO
                         </script>
                       </section>
+-->
+                </section>
+                <section>
+                    <section>
+                        <h2>Welches Framework passt für welche Applikationen?</h2>
+                    </section>
+                    <section>
+                        <h2>Arten von Apps</h2>
+                        <ul class="plain">
+                            <li>Native Web-Apps (Single-Page-Apps)
+                            <ul class="plain"><li>Desktop</li><li>Mobile</li></ul></li>
+                            <li>Server-side Web-Apps</li>
+                        </ul>
+                    </section>
                 </section>
 
 <!--
